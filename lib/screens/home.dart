@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final todosList = ToDo.todoList();
-  List<ToDo> _foundToDo = {} as List<ToDo>;
+  List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
 
   @override
@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
   }
 
   void _runFilter(String enteredKeyword) {
-    List<ToDo> results = {} as List<ToDo>;
+    List<ToDo> results = [];
     if (enteredKeyword.isEmpty) {
       results = todosList;
     } else {
